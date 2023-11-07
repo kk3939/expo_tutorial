@@ -1,10 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Alert, Button, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
+      <Button title="alertを出す" onPress={() => Alert.alert("test", "message", [
+      {
+        text: 'Cancel',
+        onPress: () => Alert.alert('Cancel Pressed'),
+        style: 'cancel',
+      },
+    ],
+    {
+      cancelable: true,
+      // only works on Android
+      // onDismiss: () =>
+      //   Alert.alert(
+      //     'This alert was dismissed by tapping outside of the alert dialog.',
+      //   ),
+    })}/>
       <StatusBar style="auto" />
     </View>
   );
