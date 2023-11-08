@@ -1,35 +1,13 @@
+/* eslint-disable react/style-prop-object */
 import { StatusBar } from "expo-status-bar";
-import { Alert, Button, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <Button
-        title="alertを出す"
-        onPress={() =>
-          Alert.alert(
-            "test",
-            "message",
-            [
-              {
-                text: "Cancel",
-                onPress: () => Alert.alert("Cancel Pressed"),
-                style: "cancel",
-              },
-            ],
-            {
-              cancelable: true,
-              // only works on Android
-              // onDismiss: () =>
-              //   Alert.alert(
-              //     'This alert was dismissed by tapping outside of the alert dialog.',
-              //   ),
-            },
-          )
-        }
-      />
-      {/* eslint-disable-next-line react/style-prop-object */}
+      <Text style={{ color: "#FFF" }}>
+        Open up App.js to start working on your app!
+      </Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -38,7 +16,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#25292e",
     alignItems: "center",
     justifyContent: "center",
   },
